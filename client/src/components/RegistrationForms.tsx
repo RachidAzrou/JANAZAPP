@@ -53,6 +53,7 @@ type PartnerFormData = z.infer<ReturnType<typeof createPartnerFormSchema>>;
 
 export default function RegistrationForms() {
   const { t } = useTranslation('forms');
+  const { t: tLanding } = useTranslation('landing');
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: formRef, isVisible: formVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
   const [showSuccess, setShowSuccess] = useState(false);
@@ -230,7 +231,7 @@ export default function RegistrationForms() {
               : 'opacity-0 translate-y-8'
           }`}>
             <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0" data-testid="text-registration-subtitle">
-              Registreer jezelf voor toegang tot onze diensten en persoonlijke ondersteuning
+              {tLanding('registration.subtitle')}
             </p>
           </div>
         </div>

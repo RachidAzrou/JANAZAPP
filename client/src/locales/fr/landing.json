@@ -24,6 +24,9 @@
     "cookies": "Cookies",
     "terms": "Conditions Générales"
   },
+  "registration": {
+    "subtitle": "Inscrivez-vous pour accéder à nos services et bénéficier d'un soutien personnalisé"
+  },
   "features": {
     "subtitle": "Une solution numérique qui respecte les valeurs religieuses et simplifie les processus complexes",
     "items": [

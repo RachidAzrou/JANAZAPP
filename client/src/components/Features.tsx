@@ -85,9 +85,7 @@ export default function Features() {
               : 'opacity-0 translate-y-8'
           }`}>
             <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0" data-testid="text-features-subtitle">
-              Een digitale oplossing die
-              <span className="text-foreground font-medium"> religieuze waarden respecteert</span> en
-              <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
+              {t('features.subtitle')}
             </p>
           </div>
         </div>

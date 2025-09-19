@@ -24,6 +24,9 @@
     "cookies": "Çerezler",
     "terms": "Şartlar ve Koşullar"
   },
+  "registration": {
+    "subtitle": "Hizmetlerimize erişim ve kişisel destek için kendinizi kaydedin"
+  },
   "features": {
     "subtitle": "Dini değerlere saygı gösteren ve karmaşık süreçleri basitleştiren dijital bir çözüm",
     "items": [
