@@ -38,12 +38,11 @@ export default function LanguageSwitcher() {
         <Button 
           variant="ghost" 
           size="sm" 
-          className="gap-2 font-medium rounded-md bg-primary/10 text-primary hover:bg-primary/20 hover:scale-105 transition-all duration-300"
+          className="gap-2 font-medium rounded-md text-foreground hover:bg-muted hover:text-foreground transition-all duration-300"
           data-testid="button-language-switcher"
         >
           <Globe className="h-4 w-4" />
           <span className="text-xs font-bold tracking-wider">{currentLanguage.countryCode}</span>
-          <span className="hidden sm:inline">{currentLanguage.name}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent 
