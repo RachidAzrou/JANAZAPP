@@ -62,101 +62,105 @@ export default function TermsPage() {
                 <CardContent className="p-8 space-y-8">
                   
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">1. Definities</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.definitions.title')}</h2>
                     <div className="space-y-3 text-base leading-relaxed text-muted-foreground">
-                      <p><strong>JanazApp:</strong> de aanbieder van het digitale platform voor overlijdenszorg.</p>
-                      <p><strong>Gebruiker:</strong> iedere natuurlijke persoon of rechtspersoon die gebruikmaakt van JanazApp.</p>
-                      <p><strong>Partner:</strong> ondernemers, verzekeraars of andere partners die zich via JanazApp aansluiten.</p>
-                      <p><strong>Diensten:</strong> alle (digitale) functionaliteiten die via het platform beschikbaar worden gesteld.</p>
+                      <p><strong>JanazApp:</strong> {t('terms.sections.definitions.janazapp')}</p>
+                      <p><strong>Gebruiker:</strong> {t('terms.sections.definitions.user')}</p>
+                      <p><strong>Partner:</strong> {t('terms.sections.definitions.partner')}</p>
+                      <p><strong>Diensten:</strong> {t('terms.sections.definitions.services')}</p>
                     </div>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">2. Toepasselijkheid</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.applicability.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      Deze voorwaarden zijn van toepassing op elk gebruik van JanazApp, zowel door particulieren (families) als door partners (uitvaartondernemers, verzekeraars).
+                      {t('terms.sections.applicability.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">3. Diensten van JanazApp</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.janazappServices.title')}</h2>
                     <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
-                      <li>• JanazApp biedt een digitaal platform voor overlijdenszorg, waarmee families, ondernemers en verzekeraars met elkaar worden verbonden.</li>
-                      <li>• JanazApp levert geen uitvaartdiensten zelf, maar faciliteert de communicatie en samenwerking tussen betrokken partijen.</li>
-                      <li>• JanazApp kan functionaliteiten toevoegen, wijzigen of verwijderen.</li>
+                      {(t('terms.sections.janazappServices.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">4. Gebruik van het platform</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.platformUse.title')}</h2>
                     <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
-                      <li>• De gebruiker is verplicht om juiste en actuele gegevens te verstrekken.</li>
-                      <li>• Het is niet toegestaan het platform te gebruiken voor illegale, misleidende of schadelijke doeleinden.</li>
-                      <li>• Accounts zijn persoonlijk en mogen niet worden gedeeld zonder toestemming van JanazApp.</li>
+                      {(t('terms.sections.platformUse.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">5. Vergoedingen en betalingen</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.payments.title')}</h2>
                     <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
-                      <li>• Voor families is het gebruik van JanazApp kosteloos.</li>
-                      <li>• Partners (ondernemers en verzekeraars) kunnen kosten verschuldigd zijn conform een aparte overeenkomst of abonnementsmodel.</li>
-                      <li>• Alle bedragen zijn exclusief btw, tenzij anders vermeld.</li>
+                      {(t('terms.sections.payments.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">6. Privacy en gegevensbescherming</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.privacy.title')}</h2>
                     <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
-                      <li>• JanazApp verwerkt persoonsgegevens in overeenstemming met de Privacyverklaring en de AVG/GDPR.</li>
-                      <li>• Gebruikers blijven verantwoordelijk voor de juistheid van de gegevens die zij aanleveren.</li>
+                      {(t('terms.sections.privacy.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">7. Aansprakelijkheid</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.liability.title')}</h2>
                     <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
-                      <li>• JanazApp is niet aansprakelijk voor directe of indirecte schade die voortvloeit uit het gebruik van het platform, tenzij sprake is van opzet of grove nalatigheid.</li>
-                      <li>• JanazApp is niet verantwoordelijk voor de dienstverlening van uitvaartondernemers, verzekeraars of andere externe partijen die via het platform actief zijn.</li>
-                      <li>• De totale aansprakelijkheid van JanazApp is in alle gevallen beperkt tot het bedrag dat de gebruiker in de laatste 12 maanden aan JanazApp heeft betaald (indien van toepassing).</li>
+                      {(t('terms.sections.liability.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">8. Intellectuele eigendom</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.intellectualProperty.title')}</h2>
                     <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
-                      <li>• Alle rechten van intellectuele eigendom op het platform, de software, logo's en content berusten bij JanazApp.</li>
-                      <li>• Het is niet toegestaan zonder toestemming materialen van JanazApp te kopiëren, verspreiden of openbaar te maken.</li>
+                      {(t('terms.sections.intellectualProperty.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">9. Duur en beëindiging</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.termination.title')}</h2>
                     <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
-                      <li>• Gebruikers kunnen hun account op elk moment beëindigen.</li>
-                      <li>• JanazApp kan de toegang tot het platform beëindigen bij misbruik of overtreding van deze voorwaarden.</li>
+                      {(t('terms.sections.termination.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">10. Overmacht</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.forceMajeure.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      JanazApp is niet verplicht om verplichtingen na te komen indien dit onmogelijk is door overmacht, zoals storingen in internetverbinding, stroomuitval, of overheidsmaatregelen.
+                      {t('terms.sections.forceMajeure.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">11. Toepasselijk recht en geschillen</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.law.title')}</h2>
                     <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
-                      <li>• Op deze voorwaarden is uitsluitend Nederlands recht van toepassing.</li>
-                      <li>• Geschillen zullen worden voorgelegd aan de bevoegde rechter in het arrondissement waar JanazApp gevestigd is.</li>
+                      {(t('terms.sections.law.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">12. Wijzigingen</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('terms.sections.changes.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      JanazApp kan deze algemene voorwaarden wijzigen. De meest actuele versie staat altijd op de website.
+                      {t('terms.sections.changes.content')}
                     </p>
                   </section>
 

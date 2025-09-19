@@ -50,7 +50,16 @@
   },
   "terms": {
     "title": "Şartlar ve Koşullar",
-    "intro": "Bu şartlar ve koşullar JanazApp hizmetlerinin kullanımı için geçerlidir. Hizmetlerimizi kullanarak bu şartları kabul etmiş olursunuz."
+    "intro": "Bu şartlar ve koşullar JanazApp hizmetlerinin kullanımı için geçerlidir. Hizmetlerimizi kullanarak bu şartları kabul etmiş olursunuz.",
+    "sections": {
+      "definitions": {
+        "title": "1. Tanımlar",
+        "janazapp": "cenaze bakımı için dijital platform sağlayıcısı.",
+        "user": "JanazApp kullanan herhangi bir gerçek veya tüzel kişi.",
+        "partner": "JanazApp üzerinden katılan girişimciler, sigortacılar veya diğer ortaklar.",
+        "services": "platform üzerinden sunulan tüm (dijital) işlevler."
+      }
+    }
   },
   "cookies": {
     "title": "Çerez Politikası",

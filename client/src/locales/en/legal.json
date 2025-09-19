@@ -50,7 +50,88 @@
   },
   "terms": {
     "title": "Terms and Conditions",
-    "intro": "These terms and conditions apply to the use of JanazApp services. By using our services, you agree to these terms."
+    "intro": "These terms and conditions apply to the use of JanazApp services. By using our services, you agree to these terms.",
+    "sections": {
+      "definitions": {
+        "title": "1. Definitions",
+        "janazapp": "the provider of the digital platform for funeral care.",
+        "user": "any natural person or legal entity using JanazApp.",
+        "partner": "entrepreneurs, insurers or other partners joining through JanazApp.",
+        "services": "all (digital) functionalities made available through the platform."
+      },
+      "applicability": {
+        "title": "2. Applicability",
+        "content": "These terms apply to every use of JanazApp, both by individuals (families) and by partners (funeral directors, insurers)."
+      },
+      "janazappServices": {
+        "title": "3. JanazApp Services",
+        "items": [
+          "JanazApp offers a digital platform for funeral care, connecting families, entrepreneurs and insurers.",
+          "JanazApp does not provide funeral services itself, but facilitates communication and collaboration between involved parties.",
+          "JanazApp may add, modify or remove functionalities."
+        ]
+      },
+      "platformUse": {
+        "title": "4. Platform Usage",
+        "items": [
+          "Users are required to provide accurate and current information.",
+          "It is not permitted to use the platform for illegal, misleading or harmful purposes.",
+          "Accounts are personal and may not be shared without JanazApp's permission."
+        ]
+      },
+      "payments": {
+        "title": "5. Fees and Payments",
+        "items": [
+          "For families, using JanazApp is free of charge.",
+          "Partners (entrepreneurs and insurers) may be charged fees according to a separate agreement or subscription model.",
+          "All amounts are exclusive of VAT, unless stated otherwise."
+        ]
+      },
+      "privacy": {
+        "title": "6. Privacy and Data Protection",
+        "items": [
+          "JanazApp processes personal data in accordance with the Privacy Statement and GDPR.",
+          "Users remain responsible for the accuracy of the data they provide."
+        ]
+      },
+      "liability": {
+        "title": "7. Liability",
+        "items": [
+          "JanazApp is not liable for direct or indirect damage resulting from the use of the platform, unless there is intent or gross negligence.",
+          "JanazApp is not responsible for the services provided by funeral directors, insurers or other external parties active through the platform.",
+          "JanazApp's total liability is in all cases limited to the amount the user has paid to JanazApp in the last 12 months (if applicable)."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "8. Intellectual Property",
+        "items": [
+          "All intellectual property rights to the platform, software, logos and content belong to JanazApp.",
+          "It is not permitted to copy, distribute or make public JanazApp materials without permission."
+        ]
+      },
+      "termination": {
+        "title": "9. Duration and Termination",
+        "items": [
+          "Users can terminate their account at any time.",
+          "JanazApp may terminate access to the platform in case of abuse or violation of these terms."
+        ]
+      },
+      "forceMajeure": {
+        "title": "10. Force Majeure",
+        "content": "JanazApp is not obligated to fulfill obligations if this is impossible due to force majeure, such as internet connection failures, power outages, or government measures."
+      },
+      "law": {
+        "title": "11. Applicable Law and Disputes",
+        "items": [
+          "These terms are exclusively governed by Dutch law.",
+          "Disputes will be submitted to the competent court in the district where JanazApp is located."
+        ]
+      },
+      "changes": {
+        "title": "12. Changes",
+        "content": "JanazApp may change these terms and conditions. The most current version is always available on the website."
+      }
+    }
   },
   "cookies": {
     "title": "Cookie Policy",

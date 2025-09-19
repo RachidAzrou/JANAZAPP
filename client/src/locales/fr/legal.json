@@ -50,7 +50,88 @@
   },
   "terms": {
     "title": "Conditions Générales",
-    "intro": "Ces conditions générales s'appliquent à l'utilisation des services JanazApp. En utilisant nos services, vous acceptez ces conditions."
+    "intro": "Ces conditions générales s'appliquent à l'utilisation des services JanazApp. En utilisant nos services, vous acceptez ces conditions.",
+    "sections": {
+      "definitions": {
+        "title": "1. Définitions",
+        "janazapp": "le fournisseur de la plateforme numérique pour les soins funéraires.",
+        "user": "toute personne physique ou morale utilisant JanazApp.",
+        "partner": "entrepreneurs, assureurs ou autres partenaires rejoignant via JanazApp.",
+        "services": "toutes les fonctionnalités (numériques) rendues disponibles via la plateforme."
+      },
+      "applicability": {
+        "title": "2. Applicabilité",
+        "content": "Ces conditions s'appliquent à chaque utilisation de JanazApp, tant par les particuliers (familles) que par les partenaires (pompes funèbres, assureurs)."
+      },
+      "janazappServices": {
+        "title": "3. Services JanazApp",
+        "items": [
+          "JanazApp offre une plateforme numérique pour les soins funéraires, connectant familles, entrepreneurs et assureurs.",
+          "JanazApp ne fournit pas de services funéraires lui-même, mais facilite la communication et la collaboration entre les parties impliquées.",
+          "JanazApp peut ajouter, modifier ou supprimer des fonctionnalités."
+        ]
+      },
+      "platformUse": {
+        "title": "4. Utilisation de la plateforme",
+        "items": [
+          "Les utilisateurs sont tenus de fournir des informations exactes et actuelles.",
+          "Il est interdit d'utiliser la plateforme à des fins illégales, trompeuses ou nuisibles.",
+          "Les comptes sont personnels et ne peuvent être partagés sans l'autorisation de JanazApp."
+        ]
+      },
+      "payments": {
+        "title": "5. Frais et Paiements",
+        "items": [
+          "Pour les familles, l'utilisation de JanazApp est gratuite.",
+          "Les partenaires (entrepreneurs et assureurs) peuvent être facturés selon un accord séparé ou un modèle d'abonnement.",
+          "Tous les montants sont hors TVA, sauf indication contraire."
+        ]
+      },
+      "privacy": {
+        "title": "6. Confidentialité et Protection des Données",
+        "items": [
+          "JanazApp traite les données personnelles conformément à la Déclaration de Confidentialité et au RGPD.",
+          "Les utilisateurs restent responsables de l'exactitude des données qu'ils fournissent."
+        ]
+      },
+      "liability": {
+        "title": "7. Responsabilité",
+        "items": [
+          "JanazApp n'est pas responsable des dommages directs ou indirects résultant de l'utilisation de la plateforme, sauf en cas d'intention ou de négligence grave.",
+          "JanazApp n'est pas responsable des services fournis par les pompes funèbres, assureurs ou autres parties externes actives via la plateforme.",
+          "La responsabilité totale de JanazApp est dans tous les cas limitée au montant que l'utilisateur a payé à JanazApp au cours des 12 derniers mois (le cas échéant)."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "8. Propriété Intellectuelle",
+        "items": [
+          "Tous les droits de propriété intellectuelle sur la plateforme, le logiciel, les logos et le contenu appartiennent à JanazApp.",
+          "Il est interdit de copier, distribuer ou rendre public les matériaux de JanazApp sans autorisation."
+        ]
+      },
+      "termination": {
+        "title": "9. Durée et Résiliation",
+        "items": [
+          "Les utilisateurs peuvent résilier leur compte à tout moment.",
+          "JanazApp peut résilier l'accès à la plateforme en cas d'abus ou de violation de ces conditions."
+        ]
+      },
+      "forceMajeure": {
+        "title": "10. Force Majeure",
+        "content": "JanazApp n'est pas obligé de remplir ses obligations si cela est impossible en raison de force majeure, comme des pannes de connexion Internet, des coupures de courant, ou des mesures gouvernementales."
+      },
+      "law": {
+        "title": "11. Loi Applicable et Litiges",
+        "items": [
+          "Ces conditions sont exclusivement régies par le droit néerlandais.",
+          "Les litiges seront soumis au tribunal compétent du district où JanazApp est situé."
+        ]
+      },
+      "changes": {
+        "title": "12. Modifications",
+        "content": "JanazApp peut modifier ces conditions générales. La version la plus récente est toujours disponible sur le site web."
+      }
+    }
   },
   "cookies": {
     "title": "Politique des Cookies",

@@ -50,7 +50,88 @@
   },
   "terms": {
     "title": "Algemene Voorwaarden",
-    "intro": "Deze algemene voorwaarden zijn van toepassing op het gebruik van de JanazApp-diensten. Door gebruik te maken van onze diensten gaat u akkoord met deze voorwaarden."
+    "intro": "Deze algemene voorwaarden zijn van toepassing op het gebruik van de JanazApp-diensten. Door gebruik te maken van onze diensten gaat u akkoord met deze voorwaarden.",
+    "sections": {
+      "definitions": {
+        "title": "1. Definities",
+        "janazapp": "de aanbieder van het digitale platform voor overlijdenszorg.",
+        "user": "iedere natuurlijke persoon of rechtspersoon die gebruikmaakt van JanazApp.",
+        "partner": "ondernemers, verzekeraars of andere partners die zich via JanazApp aansluiten.",
+        "services": "alle (digitale) functionaliteiten die via het platform beschikbaar worden gesteld."
+      },
+      "applicability": {
+        "title": "2. Toepasselijkheid",
+        "content": "Deze voorwaarden zijn van toepassing op elk gebruik van JanazApp, zowel door particulieren (families) als door partners (uitvaartondernemers, verzekeraars)."
+      },
+      "janazappServices": {
+        "title": "3. Diensten van JanazApp",
+        "items": [
+          "JanazApp biedt een digitaal platform voor overlijdenszorg, waarmee families, ondernemers en verzekeraars met elkaar worden verbonden.",
+          "JanazApp levert geen uitvaartdiensten zelf, maar faciliteert de communicatie en samenwerking tussen betrokken partijen.",
+          "JanazApp kan functionaliteiten toevoegen, wijzigen of verwijderen."
+        ]
+      },
+      "platformUse": {
+        "title": "4. Gebruik van het platform",
+        "items": [
+          "De gebruiker is verplicht om juiste en actuele gegevens te verstrekken.",
+          "Het is niet toegestaan het platform te gebruiken voor illegale, misleidende of schadelijke doeleinden.",
+          "Accounts zijn persoonlijk en mogen niet worden gedeeld zonder toestemming van JanazApp."
+        ]
+      },
+      "payments": {
+        "title": "5. Vergoedingen en betalingen",
+        "items": [
+          "Voor families is het gebruik van JanazApp kosteloos.",
+          "Partners (ondernemers en verzekeraars) kunnen kosten verschuldigd zijn conform een aparte overeenkomst of abonnementsmodel.",
+          "Alle bedragen zijn exclusief btw, tenzij anders vermeld."
+        ]
+      },
+      "privacy": {
+        "title": "6. Privacy en gegevensbescherming",
+        "items": [
+          "JanazApp verwerkt persoonsgegevens in overeenstemming met de Privacyverklaring en de AVG/GDPR.",
+          "Gebruikers blijven verantwoordelijk voor de juistheid van de gegevens die zij aanleveren."
+        ]
+      },
+      "liability": {
+        "title": "7. Aansprakelijkheid",
+        "items": [
+          "JanazApp is niet aansprakelijk voor directe of indirecte schade die voortvloeit uit het gebruik van het platform, tenzij sprake is van opzet of grove nalatigheid.",
+          "JanazApp is niet verantwoordelijk voor de dienstverlening van uitvaartondernemers, verzekeraars of andere externe partijen die via het platform actief zijn.",
+          "De totale aansprakelijkheid van JanazApp is in alle gevallen beperkt tot het bedrag dat de gebruiker in de laatste 12 maanden aan JanazApp heeft betaald (indien van toepassing)."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "8. Intellectuele eigendom",
+        "items": [
+          "Alle rechten van intellectuele eigendom op het platform, de software, logo's en content berusten bij JanazApp.",
+          "Het is niet toegestaan zonder toestemming materialen van JanazApp te kopiëren, verspreiden of openbaar te maken."
+        ]
+      },
+      "termination": {
+        "title": "9. Duur en beëindiging",
+        "items": [
+          "Gebruikers kunnen hun account op elk moment beëindigen.",
+          "JanazApp kan de toegang tot het platform beëindigen bij misbruik of overtreding van deze voorwaarden."
+        ]
+      },
+      "forceMajeure": {
+        "title": "10. Overmacht",
+        "content": "JanazApp is niet verplicht om verplichtingen na te komen indien dit onmogelijk is door overmacht, zoals storingen in internetverbinding, stroomuitval, of overheidsmaatregelen."
+      },
+      "law": {
+        "title": "11. Toepasselijk recht en geschillen",
+        "items": [
+          "Op deze voorwaarden is uitsluitend Nederlands recht van toepassing.",
+          "Geschillen zullen worden voorgelegd aan de bevoegde rechter in het arrondissement waar JanazApp gevestigd is."
+        ]
+      },
+      "changes": {
+        "title": "12. Wijzigingen",
+        "content": "JanazApp kan deze algemene voorwaarden wijzigen. De meest actuele versie staat altijd op de website."
+      }
+    }
   },
   "cookies": {
     "title": "Cookiebeleid",

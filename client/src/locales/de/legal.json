@@ -50,7 +50,88 @@
   },
   "terms": {
     "title": "Allgemeine Geschäftsbedingungen",
-    "intro": "Diese allgemeinen Geschäftsbedingungen gelten für die Nutzung der JanazApp-Dienste. Durch die Nutzung unserer Dienste stimmen Sie diesen Bedingungen zu."
+    "intro": "Diese allgemeinen Geschäftsbedingungen gelten für die Nutzung der JanazApp-Dienste. Durch die Nutzung unserer Dienste stimmen Sie diesen Bedingungen zu.",
+    "sections": {
+      "definitions": {
+        "title": "1. Definitionen",
+        "janazapp": "der Anbieter der digitalen Plattform für Bestattungsbetreuung.",
+        "user": "jede natürliche oder juristische Person, die JanazApp nutzt.",
+        "partner": "Unternehmer, Versicherer oder andere Partner, die sich über JanazApp anschließen.",
+        "services": "alle (digitalen) Funktionalitäten, die über die Plattform bereitgestellt werden."
+      },
+      "applicability": {
+        "title": "2. Anwendbarkeit",
+        "content": "Diese Bedingungen gelten für jede Nutzung von JanazApp, sowohl durch Privatpersonen (Familien) als auch durch Partner (Bestattungsunternehmer, Versicherer)."
+      },
+      "janazappServices": {
+        "title": "3. JanazApp-Dienste",
+        "items": [
+          "JanazApp bietet eine digitale Plattform für Bestattungsbetreuung, die Familien, Unternehmer und Versicherer miteinander verbindet.",
+          "JanazApp erbringt keine Bestattungsdienstleistungen selbst, sondern erleichtert die Kommunikation und Zusammenarbeit zwischen beteiligten Parteien.",
+          "JanazApp kann Funktionalitäten hinzufügen, ändern oder entfernen."
+        ]
+      },
+      "platformUse": {
+        "title": "4. Nutzung der Plattform",
+        "items": [
+          "Der Nutzer ist verpflichtet, richtige und aktuelle Angaben zu machen.",
+          "Es ist nicht gestattet, die Plattform für illegale, irreführende oder schädliche Zwecke zu nutzen.",
+          "Accounts sind persönlich und dürfen nicht ohne Erlaubnis von JanazApp geteilt werden."
+        ]
+      },
+      "payments": {
+        "title": "5. Vergütungen und Zahlungen",
+        "items": [
+          "Für Familien ist die Nutzung von JanazApp kostenlos.",
+          "Partner (Unternehmer und Versicherer) können Kosten gemäß einer separaten Vereinbarung oder einem Abonnementmodell schulden.",
+          "Alle Beträge sind exklusive Mehrwertsteuer, sofern nicht anders angegeben."
+        ]
+      },
+      "privacy": {
+        "title": "6. Datenschutz und Datenschutz",
+        "items": [
+          "JanazApp verarbeitet personenbezogene Daten in Übereinstimmung mit der Datenschutzerklärung und der DSGVO.",
+          "Benutzer bleiben für die Richtigkeit der von ihnen bereitgestellten Daten verantwortlich."
+        ]
+      },
+      "liability": {
+        "title": "7. Haftung",
+        "items": [
+          "JanazApp haftet nicht für direkte oder indirekte Schäden, die aus der Nutzung der Plattform resultieren, es sei denn, es liegt Vorsatz oder grobe Fahrlässigkeit vor.",
+          "JanazApp ist nicht verantwortlich für die Dienstleistungen von Bestattungsunternehmern, Versicherern oder anderen externen Parteien, die über die Plattform aktiv sind.",
+          "Die Gesamthaftung von JanazApp ist in allen Fällen auf den Betrag begrenzt, den der Nutzer in den letzten 12 Monaten an JanazApp gezahlt hat (falls zutreffend)."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "8. Geistiges Eigentum",
+        "items": [
+          "Alle Rechte des geistigen Eigentums an der Plattform, der Software, den Logos und Inhalten liegen bei JanazApp.",
+          "Es ist nicht gestattet, ohne Erlaubnis Materialien von JanazApp zu kopieren, zu verbreiten oder zu veröffentlichen."
+        ]
+      },
+      "termination": {
+        "title": "9. Laufzeit und Beendigung",
+        "items": [
+          "Benutzer können ihr Konto jederzeit beenden.",
+          "JanazApp kann den Zugang zur Plattform bei Missbrauch oder Verstoß gegen diese Bedingungen beenden."
+        ]
+      },
+      "forceMajeure": {
+        "title": "10. Höhere Gewalt",
+        "content": "JanazApp ist nicht verpflichtet, Verpflichtungen zu erfüllen, wenn dies aufgrund höherer Gewalt unmöglich ist, wie Internetverbindungsstörungen, Stromausfälle oder Regierungsmaßnahmen."
+      },
+      "law": {
+        "title": "11. Anwendbares Recht und Streitigkeiten",
+        "items": [
+          "Für diese Bedingungen gilt ausschließlich niederländisches Recht.",
+          "Streitigkeiten werden dem zuständigen Gericht im Bezirk vorgelegt, in dem JanazApp ansässig ist."
+        ]
+      },
+      "changes": {
+        "title": "12. Änderungen",
+        "content": "JanazApp kann diese allgemeinen Geschäftsbedingungen ändern. Die aktuellste Version ist immer auf der Website verfügbar."
+      }
+    }
   },
   "cookies": {
     "title": "Cookie-Richtlinie",
