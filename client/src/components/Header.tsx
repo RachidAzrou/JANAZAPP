@@ -29,8 +29,8 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Centered Desktop Navigation */}
-          <nav className="hidden md:flex items-center justify-center flex-1">
+          {/* Desktop Navigation - positioned more to the right */}
+          <nav className="hidden md:flex items-center flex-1 justify-end mr-8">
             <div className="flex items-center space-x-8">
               <Link href="/over-ons" className="text-foreground hover:text-primary transition-colors font-medium" data-testid="link-about">
                 {t('navigation.aboutUs')}
