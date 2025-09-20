@@ -1,0 +1,48 @@
+// Forceer moderne Node runtime hier (géén legacy builders)
+export const config = { runtime: "nodejs20.x" };
+
+// Importeer je gebundelde server handler (ESM)
+import handler from "../dist/index.js";
+
+/**
+ * Vercel API handler.
+ * - Als je bundel een Express-achtige handler exporteert (req, res) => ...
+ * - OF een fetch(Request) => Response handler exporteert.
+ */
+export default async function (req, res) {
+  try {
+    // 1) Express-achtige handler (twee parameters)
+    if (typeof handler === "function" && handler.length >= 2) {
+      return handler(req, res);
+    }
+
+    // 2) Fetch-achtige handler (Request -> Response)
+    if (typeof handler === "function" && handler.length <= 1) {
+      const url = new URL(req.url, `http://${req.headers.host}`);
+      const request = new Request(url, {
+        method: req.method,
+        headers: req.headers,
+        body: req.method === "GET" || req.method === "HEAD" ? undefined : req
+      });
+
+      const response = await handler(request);
+
+      res.status(response.status);
+      response.headers.forEach((v, k) => res.setHeader(k, v));
+
+      if (response.body) {
+        const buf = Buffer.from(await response.arrayBuffer());
+        res.end(buf);
+      } else {
+        res.end();
+      }
+      return;
+    }
+
+    // 3) Geen herkenbare export
+    res.status(500).json({ error: "No valid handler exported from dist/index.js" });
+  } catch (err) {
+    console.error("API error:", err);
+    res.status(500).json({ error: err?.message ?? "Internal Server Error" });
+  }
+}
