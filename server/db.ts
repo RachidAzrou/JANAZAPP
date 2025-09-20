@@ -1,21 +1,13 @@
-import { Pool } from "pg";
-import { drizzle } from "drizzle-orm/node-postgres";
+import { neon } from '@neondatabase/serverless';
+import { drizzle } from 'drizzle-orm/neon-http';
 import * as schema from "@shared/schema";
 
-const connectionString = process.env.DATABASE_URL;
-if (!connectionString) throw new Error("DATABASE_URL must be set");
-
-// Neon vereist SSL; je URL moet ?sslmode=require hebben.
-// Gebruik bij voorkeur de pooled host (...-pooler....neon.tech).
-export const pool = new Pool({
-  connectionString,
-  ssl: { rejectUnauthorized: false },
-});
-
-export const db = drizzle(pool, { schema });
-
-// Health helper
-export async function dbNow() {
-  const { rows } = await pool.query("select now()");
-  return rows[0]?.now;
+if (!process.env.DATABASE_URL) {
+  throw new Error(
+    "DATABASE_URL must be set. Did you forget to provision a database?",
+  );
 }
+
+// Use HTTP-based connection - neon-http handles SSL properly
+export const sql = neon(process.env.DATABASE_URL);
+export const db = drizzle(sql, { schema });

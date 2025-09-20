@@ -1,48 +1,31 @@
-// Geldige waarden: "nodejs" | "edge" | "experimental-edge"
-export const config = { runtime: "nodejs" };
+import { VercelRequest, VercelResponse } from '@vercel/node';
 
-// Je bundel exporteert je server handler als ESM naar dist/index.js
-import handler from "../dist/index.js";
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // CORS headers
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
 
-/**
- * Vercel API handler.
- * - Werkt met Express-achtige export: (req, res) => void|Promise
- * - Kan desnoods ook een fetch(Request)->Response export doorgeven (fallback)
- */
-export default async function (req: any, res: any) {
-  try {
-    // 1) Express/Node stijl (2 parameters)
-    if (typeof handler === "function" && handler.length >= 2) {
-      return handler(req, res);
-    }
-
-    // 2) Fetch-stijl (Request -> Response)
-    if (typeof handler === "function" && handler.length <= 1) {
-      const url = new URL(req.url, `http://${req.headers.host}`);
-      const request = new Request(url, {
-        method: req.method,
-        headers: req.headers as any,
-        body: req.method === "GET" || req.method === "HEAD" ? undefined : (req as any)
-      });
-
-      // @ts-ignore handler kan fetch-achtige zijn
-      const response = await handler(request);
-
-      res.status(response.status);
-      response.headers.forEach((v: string, k: string) => res.setHeader(k, v));
-
-      if (response.body) {
-        const buf = Buffer.from(await response.arrayBuffer());
-        res.end(buf);
-      } else {
-        res.end();
-      }
-      return;
-    }
-
-    res.status(500).json({ error: "No valid handler exported from dist/index.js" });
-  } catch (err: any) {
-    console.error("API error:", err);
-    res.status(500).json({ error: err?.message ?? "Internal Server Error" });
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
   }
+
+  // Basic health check endpoint
+  if (req.method === 'GET' && req.url === '/api/health') {
+    res.status(200).json({ status: 'ok', message: 'JanazApp API is running' });
+    return;
+  }
+
+  // Handle other API routes here as needed
+  // For now, return a basic response
+  res.status(200).json({ 
+    message: 'JanazApp API', 
+    method: req.method,
+    url: req.url 
+  });
 }
