@@ -17,6 +17,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useTranslation } from "react-i18next";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+import { Link } from "wouter";
 
 // Zod validation schemas - using function to access translations
 const createCitizenFormSchema = (t: any) => z.object({
@@ -59,6 +62,7 @@ export default function RegistrationForms() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [isRTL, setIsRTL] = useState(false);
   const [successType, setSuccessType] = useState<'citizen' | 'partner'>('citizen');
+  const { toast } = useToast();
 
   // Create schemas with translations
   const citizenFormSchema = createCitizenFormSchema(t);
@@ -100,27 +104,49 @@ export default function RegistrationForms() {
 
   const handleCitizenSubmit = async (data: CitizenFormData) => {
     try {
-      // TODO: Remove mock functionality - replace with actual API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSuccessType('citizen');
-      setShowSuccess(true);
-      citizenForm.reset();
-    } catch (error) {
-      // Handle submission error
+      const response = await apiRequest('POST', '/api/citizens', data);
+      
+      if (response.ok) {
+        setSuccessType('citizen');
+        setShowSuccess(true);
+        citizenForm.reset();
+        toast({
+          title: "Registratie voltooid!",
+          description: "Je registratie als burger is succesvol ontvangen.",
+        });
+      }
+    } catch (error: any) {
       console.error('Submission error:', error);
+      const errorMessage = error.message || 'Er is een fout opgetreden bij het registreren';
+      toast({
+        title: "Registratie mislukt",
+        description: errorMessage,
+        variant: "destructive"
+      });
     }
   };
 
   const handlePartnerSubmit = async (data: PartnerFormData) => {
     try {
-      // TODO: Remove mock functionality - replace with actual API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSuccessType('partner');
-      setShowSuccess(true);
-      partnerForm.reset();
-    } catch (error) {
-      // Handle submission error
+      const response = await apiRequest('POST', '/api/partners', data);
+      
+      if (response.ok) {
+        setSuccessType('partner');
+        setShowSuccess(true);
+        partnerForm.reset();
+        toast({
+          title: "Registratie voltooid!",
+          description: "Je registratie als partner is succesvol ontvangen.",
+        });
+      }
+    } catch (error: any) {
       console.error('Submission error:', error);
+      const errorMessage = error.message || 'Er is een fout opgetreden bij het registreren';
+      toast({
+        title: "Registratie mislukt",
+        description: errorMessage,
+        variant: "destructive"
+      });
     }
   };
 
@@ -134,8 +160,7 @@ export default function RegistrationForms() {
     const successContent = {
       title: t(`${successKey}.title`),
       subtitle: t(`${successKey}.subtitle`),
-      message: t(`${successKey}.message`),
-      nextSteps: t(`${successKey}.nextSteps`, { returnObjects: true }) as string[]
+      message: t(`${successKey}.message`)
     };
 
     return (
@@ -169,43 +194,6 @@ export default function RegistrationForms() {
                       {successContent.message}
                     </p>
                     
-                    <div className="text-left space-y-3">
-                      <h4 className="font-medium text-foreground mb-3">{t(`${successKey}.nextStepsTitle`)}</h4>
-                      <ul className="space-y-2" role="list" aria-label="Volgende stappen">
-                        {successContent.nextSteps.map((step, index) => (
-                          <li key={index} className="flex items-start gap-3">
-                            <div className="w-6 h-6 rounded-full bg-primary/15 text-primary flex items-center justify-center text-sm font-medium mt-0.5 flex-shrink-0">
-                              {index + 1}
-                            </div>
-                            <span className="text-sm text-muted-foreground leading-relaxed">{step}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  
-                  <div className="pt-4">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      {t(`${successKey}.supportQuestion`)}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                      <Button 
-                        variant="outline"
-                        size="default"
-                        onClick={() => setShowSuccess(false)} 
-                        data-testid="button-success-back"
-                      >
-                        {t(`${successKey}.backButton`)}
-                      </Button>
-                      <Button 
-                        variant="default"
-                        size="default"
-                        onClick={handleEmergencyContact}
-                        data-testid="button-contact-support"
-                      >
-                        {t(`${successKey}.contactButton`)}
-                      </Button>
-                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -410,14 +398,11 @@ export default function RegistrationForms() {
                               </FormControl>
                               <div className="space-y-1 leading-relaxed">
                                 <FormLabel className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
-                                  Ik ga akkoord met de{" "}
-                                  <a href="/privacy" className="text-primary hover:underline">
-                                    privacyverklaring
-                                  </a>{" "}
-                                  en{" "}
-                                  <a href="/algemene-voorwaarden" className="text-primary hover:underline">
-                                    algemene voorwaarden
-                                  </a>
+                                  <span dangerouslySetInnerHTML={{
+                                    __html: t('citizenForm.privacy.linkText')
+                                      .replace('{privacyLink}', `<a href="/privacy" class="text-primary hover:text-primary/80 underline font-medium" data-testid="link-privacy">${t('citizenForm.privacy.privacyLink')}</a>`)
+                                      .replace('{termsLink}', `<a href="/algemene-voorwaarden" class="text-primary hover:text-primary/80 underline font-medium" data-testid="link-terms">${t('citizenForm.privacy.termsLink')}</a>`)
+                                  }} />
                                 </FormLabel>
                                 <p className="text-xs text-muted-foreground">
                                   {t('citizenForm.privacy.helpText')}
@@ -607,14 +592,11 @@ export default function RegistrationForms() {
                               </FormControl>
                               <div className="space-y-1 leading-relaxed">
                                 <FormLabel className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
-                                  Ik ga akkoord met de{" "}
-                                  <a href="/privacy" className="text-primary hover:underline">
-                                    privacyverklaring
-                                  </a>{" "}
-                                  en{" "}
-                                  <a href="/algemene-voorwaarden" className="text-primary hover:underline">
-                                    algemene voorwaarden
-                                  </a>
+                                  <span dangerouslySetInnerHTML={{
+                                    __html: t('partnerForm.privacy.linkText')
+                                      .replace('{privacyLink}', `<a href="/privacy" class="text-primary hover:text-primary/80 underline font-medium" data-testid="link-privacy-partner">${t('partnerForm.privacy.privacyLink')}</a>`)
+                                      .replace('{termsLink}', `<a href="/algemene-voorwaarden" class="text-primary hover:text-primary/80 underline font-medium" data-testid="link-terms-partner">${t('partnerForm.privacy.termsLink')}</a>`)
+                                  }} />
                                 </FormLabel>
                                 <FormMessage />
                               </div>

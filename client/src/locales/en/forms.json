@@ -48,6 +48,9 @@
     },
     "privacy": {
       "label": "I agree with the privacy policy and terms and conditions",
+      "linkText": "I agree with the {privacyLink} and {termsLink}",
+      "privacyLink": "privacy policy",
+      "termsLink": "terms and conditions",
       "helpText": "Your data is securely stored according to GDPR guidelines"
     },
     "submitButton": "Register as Citizen",
@@ -94,7 +97,10 @@
       "andere": "Other - Related services"
     },
     "privacy": {
-      "label": "I agree with the privacy policy and terms and conditions"
+      "label": "I agree with the privacy policy and terms and conditions",
+      "linkText": "I agree with the {privacyLink} and {termsLink}",
+      "privacyLink": "privacy policy",
+      "termsLink": "terms and conditions"
     },
     "submitButton": "Register as Partner",
     "submittingButton": "Registering..."
@@ -120,7 +126,7 @@
     "citizen": {
       "title": "Registration Complete",
       "subtitle": "Thank you for registering with JanazApp",
-      "message": "Your application has been received in good order. We understand this may be a difficult time for you and appreciate your trust in our services.",
+      "message": "Thank you for registering with JanazApp. We'll keep you updated and will be in touch soon.",
       "nextStepsTitle": "Next steps:",
       "nextSteps": [
         "Within 24 hours, one of our staff will personally contact you",

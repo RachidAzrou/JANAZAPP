@@ -48,6 +48,9 @@
     },
     "privacy": {
       "label": "أوافق على سياسة الخصوصية والشروط والأحكام",
+      "linkText": "أوافق على {privacyLink} و {termsLink}",
+      "privacyLink": "سياسة الخصوصية",
+      "termsLink": "الشروط والأحكام",
       "helpText": "يتم تخزين بياناتك بأمان وفقاً لإرشادات GDPR"
     },
     "submitButton": "التسجيل كمواطن",
@@ -94,7 +97,10 @@
       "andere": "أخرى - خدمات ذات صلة"
     },
     "privacy": {
-      "label": "أوافق على سياسة الخصوصية والشروط والأحكام"
+      "label": "أوافق على سياسة الخصوصية والشروط والأحكام",
+      "linkText": "أوافق على {privacyLink} و{termsLink}",
+      "privacyLink": "سياسة الخصوصية",
+      "termsLink": "الشروط والأحكام"
     },
     "submitButton": "التسجيل كشريك",
     "submittingButton": "جاري التسجيل..."

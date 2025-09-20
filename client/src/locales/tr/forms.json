@@ -48,6 +48,9 @@
     },
     "privacy": {
       "label": "Gizlilik politikası ve şartlar ve koşulları kabul ediyorum",
+      "linkText": "{privacyLink} ve {termsLink} kabul ediyorum",
+      "privacyLink": "gizlilik politikasını",
+      "termsLink": "şartlar ve koşulları",
       "helpText": "Verileriniz GDPR yönergelerine göre güvenli bir şekilde saklanır"
     },
     "submitButton": "Vatandaş Olarak Kayıt Ol",
@@ -94,7 +97,10 @@
       "andere": "Diğer - İlgili hizmetler"
     },
     "privacy": {
-      "label": "Gizlilik politikası ve şartlar ve koşulları kabul ediyorum"
+      "label": "Gizlilik politikası ve şartlar ve koşulları kabul ediyorum",
+      "linkText": "{privacyLink} ve {termsLink} kabul ediyorum",
+      "privacyLink": "gizlilik politikasını",
+      "termsLink": "şartlar ve koşulları"
     },
     "submitButton": "Ortak Olarak Kayıt Ol",
     "submittingButton": "Kayıt Olunuyor..."

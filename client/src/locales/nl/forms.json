@@ -48,6 +48,9 @@
     },
     "privacy": {
       "label": "Ik ga akkoord met de privacyverklaring en algemene voorwaarden",
+      "linkText": "Ik ga akkoord met de {privacyLink} en {termsLink}",
+      "privacyLink": "privacyverklaring",
+      "termsLink": "algemene voorwaarden",
       "helpText": "Uw gegevens worden veilig opgeslagen volgens GDPR-richtlijnen"
     },
     "submitButton": "Registreer als Burger",
@@ -94,7 +97,10 @@
       "andere": "Andere - Gerelateerde diensten"
     },
     "privacy": {
-      "label": "Ik ga akkoord met de privacyverklaring en algemene voorwaarden"
+      "label": "Ik ga akkoord met de privacyverklaring en algemene voorwaarden",
+      "linkText": "Ik ga akkoord met de {privacyLink} en {termsLink}",
+      "privacyLink": "privacyverklaring",
+      "termsLink": "algemene voorwaarden"
     },
     "submitButton": "Registreer als Partner",
     "submittingButton": "Bezig met Registreren..."
@@ -120,7 +126,7 @@
     "citizen": {
       "title": "Registratie Voltooid",
       "subtitle": "Bedankt voor uw registratie bij JanazApp",
-      "message": "Uw aanvraag is in goede orde ontvangen. Wij begrijpen dat dit een moeilijke tijd voor u kan zijn en waarderen uw vertrouwen in onze dienstverlening.",
+      "message": "Bedankt voor je registratie bij JanazApp. We houden je op de hoogte en laten snel van ons horen.",
       "nextStepsTitle": "Volgende stappen:",
       "nextSteps": [
         "Binnen 24 uur neemt één van onze medewerkers persoonlijk contact met u op",

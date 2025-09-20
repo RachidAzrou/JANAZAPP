@@ -48,6 +48,9 @@
     },
     "privacy": {
       "label": "Ich stimme der Datenschutzerklärung und den allgemeinen Geschäftsbedingungen zu",
+      "linkText": "Ich stimme der {privacyLink} und den {termsLink} zu",
+      "privacyLink": "Datenschutzerklärung",
+      "termsLink": "allgemeinen Geschäftsbedingungen",
       "helpText": "Ihre Daten werden gemäß DSGVO-Richtlinien sicher gespeichert"
     },
     "submitButton": "Als Bürger registrieren",
@@ -94,7 +97,10 @@
       "andere": "Andere - Verwandte Dienstleistungen"
     },
     "privacy": {
-      "label": "Ich stimme der Datenschutzerklärung und den allgemeinen Geschäftsbedingungen zu"
+      "label": "Ich stimme der Datenschutzerklärung und den allgemeinen Geschäftsbedingungen zu",
+      "linkText": "Ich stimme der {privacyLink} und den {termsLink} zu",
+      "privacyLink": "Datenschutzerklärung",
+      "termsLink": "allgemeinen Geschäftsbedingungen"
     },
     "submitButton": "Als Partner registrieren",
     "submittingButton": "Registrierung läuft..."

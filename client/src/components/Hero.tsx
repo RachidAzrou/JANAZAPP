@@ -2,11 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "wouter";
+import { goToSection } from "@/lib/sectionNav";
 import heroImage from "@assets/generated_images/Islamic_architecture_hero_background_5d13e65a.png";
 import logoImage from "@assets/JanazaApp.ai_1758310618265.png";
 
 export default function Hero() {
   const { t } = useTranslation('landing');
+  const [, setLocation] = useLocation();
   
   return (
     <section className="relative min-h-[100svh] sm:min-h-screen flex items-center justify-center py-8 sm:py-0">
@@ -55,7 +58,7 @@ export default function Hero() {
                 <Button 
                   variant="outline" 
                   className="w-full bg-white/10 border-white/30 text-white hover:bg-white/20"
-                  onClick={() => console.log('Burger registration clicked')}
+                  onClick={() => goToSection('registratie', setLocation)}
                   data-testid="button-register-citizen"
                 >
                   {t('hero.citizensCard.buttonText')}
@@ -78,7 +81,7 @@ export default function Hero() {
                 <Button 
                   variant="outline" 
                   className="w-full bg-white/10 border-white/30 text-white hover:bg-white/20"
-                  onClick={() => console.log('Partner registration clicked')}
+                  onClick={() => goToSection('registratie', setLocation)}
                   data-testid="button-register-partner"
                 >
                   {t('hero.partnersCard.buttonText')}

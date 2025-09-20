@@ -4,7 +4,7 @@
     "contact": {
       "address": "Antwerp, Belçika",
       "email": "info@janazapp.com",
-      "phone": "+32 2 123 4567"
+      "phone": "+32 827 32 12"
     },
     "copyright": "© 2025 JanazApp. Tüm hakları saklıdır.",
     "links": {
@@ -43,7 +43,7 @@
       },
       {
         "title": "7. İletişim",
-        "content": "Bu gizlilik politikası hakkındaki sorularınız için bizimle iletişime geçebilirsiniz:\nE-posta: info@janazapp.com\nTelefon: +32 2 123 4567"
+        "content": "Bu gizlilik politikası hakkındaki sorularınız için bizimle iletişime geçebilirsiniz:\nE-posta: info@janazapp.com\nTelefon: +32 827 32 12"
       }
     ],
     "lastUpdated": "Son güncelleme: Ocak 2025"
@@ -58,6 +58,78 @@
         "user": "JanazApp kullanan herhangi bir gerçek veya tüzel kişi.",
         "partner": "JanazApp üzerinden katılan girişimciler, sigortacılar veya diğer ortaklar.",
         "services": "platform üzerinden sunulan tüm (dijital) işlevler."
+      },
+      "applicability": {
+        "title": "2. Uygulanabilirlik",
+        "content": "Bu şartlar her JanazApp kullanımı için geçerlidir, hem bireyler (aileler) hem de ortaklar (cenaze müdürleri, sigortacılar) tarafından."
+      },
+      "janazappServices": {
+        "title": "3. JanazApp Hizmetleri",
+        "items": [
+          "JanazApp aileleri, girişimcileri ve sigortacıları birbirine bağlayan cenaze bakımı için dijital bir platform sunar.",
+          "JanazApp kendisi cenaze hizmetleri sağlamaz, ancak ilgili taraflar arasında iletişim ve işbirliğini kolaylaştırır.",
+          "JanazApp işlevler ekleyebilir, değiştirebilir veya kaldırabilir."
+        ]
+      },
+      "platformUse": {
+        "title": "4. Platformun Kullanımı",
+        "items": [
+          "Kullanıcılar doğru ve güncel bilgi sağlamakla yükümlüdür.",
+          "Platformu yasa dışı, yanıltıcı veya zararlı amaçlar için kullanmak yasaktır.",
+          "Hesaplar kişiseldir ve JanazApp'in izni olmadan paylaşılamaz."
+        ]
+      },
+      "payments": {
+        "title": "5. Ücretler ve Ödemeler",
+        "items": [
+          "Aileler için JanazApp kullanımı ücretsizdir.",
+          "Ortaklar (girişimciler ve sigortacılar) ayrı bir anlaşmaya veya abonelik modeline göre ücretlendirilbilir.",
+          "Aksi belirtilmedikçe tüm tutarlar KDV hariçtir."
+        ]
+      },
+      "privacy": {
+        "title": "6. Gizlilik ve Veri Koruması",
+        "items": [
+          "JanazApp kişisel verileri Gizlilik Bildirimi ve GDPR'a uygun olarak işler.",
+          "Kullanıcılar sağladıkları verilerin doğruluğundan sorumlu olmaya devam ederler."
+        ]
+      },
+      "liability": {
+        "title": "7. Sorumluluk",
+        "items": [
+          "JanazApp kasıt veya ağır ihmal olmadıkça, platformun kullanımından kaynaklanan doğrudan veya dolaylı zararlardan sorumlu değildir.",
+          "JanazApp platform üzerinden aktif olan cenaze müdürleri, sigortacılar veya diğer harici taraflar tarafından sağlanan hizmetlerden sorumlu değildir.",
+          "JanazApp'in toplam sorumluluğu her durumda kullanıcının son 12 ayda JanazApp'e ödediği tutar ile sınırlıdır (varsa)."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "8. Fikri Mülkiyet",
+        "items": [
+          "Platform, yazılım, logolar ve içerik üzerindeki tüm fikri mülkiyet hakları JanazApp'e aittir.",
+          "İzin olmadan JanazApp materyallerini kopyalamak, dağıtmak veya kamuya açıklamak yasaktır."
+        ]
+      },
+      "termination": {
+        "title": "9. Süre ve Sonlandırma",
+        "items": [
+          "Kullanıcılar hesaplarını istediği zaman sonlandırabilir.",
+          "JanazApp kötüye kullanım veya bu şartların ihlali durumunda platforma erişimi sonlandırabilir."
+        ]
+      },
+      "forceMajeure": {
+        "title": "10. Mücbir Sebep",
+        "content": "JanazApp internet bağlantısı arızaları, elektrik kesintileri veya hükümet önlemleri gibi mücbir sebepler nedeniyle imkansız olduğunda yükümlülükleri yerine getirmekle yükümlü değildir."
+      },
+      "law": {
+        "title": "11. Uygulanacak Hukuk ve Anlaşmazlıklar",
+        "items": [
+          "Bu şartlar yalnızca Hollanda hukukuna tabidir.",
+          "Anlaşmazlıklar JanazApp'in bulunduğu bölgedeki yetkili mahkemeye sunulacaktır."
+        ]
+      },
+      "changes": {
+        "title": "12. Değişiklikler",
+        "content": "JanazApp bu şartları ve koşulları değiştirebilir. En güncel sürüm her zaman web sitesinde mevcuttur."
       }
     }
   },
@@ -110,7 +182,7 @@
       },
       {
         "title": "7. İletişim",
-        "content": "Çerez politikamızla ilgili sorularınız için bizimle iletişime geçebilirsiniz:\nE-posta: info@janazapp.com\nTelefon: +32 2 123 4567"
+        "content": "Çerez politikamızla ilgili sorularınız için bizimle iletişime geçebilirsiniz:\nE-posta: info@janazapp.com\nTelefon: +32 827 32 12"
       }
     ],
     "lastUpdated": "Son güncelleme: Ocak 2025"

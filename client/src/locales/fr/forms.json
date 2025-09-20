@@ -48,6 +48,9 @@
     },
     "privacy": {
       "label": "J'accepte la politique de confidentialité et les conditions générales",
+      "linkText": "J'accepte la {privacyLink} et les {termsLink}",
+      "privacyLink": "politique de confidentialité",
+      "termsLink": "conditions générales",
       "helpText": "Vos données sont stockées en sécurité selon les directives RGPD"
     },
     "submitButton": "S'inscrire comme Citoyen",
@@ -94,7 +97,10 @@
       "andere": "Autre - Services connexes"
     },
     "privacy": {
-      "label": "J'accepte la politique de confidentialité et les conditions générales"
+      "label": "J'accepte la politique de confidentialité et les conditions générales",
+      "linkText": "J'accepte la {privacyLink} et les {termsLink}",
+      "privacyLink": "politique de confidentialité",
+      "termsLink": "conditions générales"
     },
     "submitButton": "S'inscrire comme Partenaire",
     "submittingButton": "Inscription en cours..."
