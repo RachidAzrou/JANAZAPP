@@ -1,6 +1,7 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
+// api/server.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -22,10 +23,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Handle other API routes here as needed
-  // For now, return a basic response
-  res.status(200).json({ 
-    message: 'JanazApp API', 
+  res.status(200).json({
+    message: 'JanazApp API',
     method: req.method,
-    url: req.url 
+    url: req.url,
   });
 }
