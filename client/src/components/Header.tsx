@@ -57,9 +57,11 @@ export default function Header() {
           {/* Right side controls */}
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
             <LanguageSwitcher />
-            <Button variant="ghost" size="default" className="font-semibold rounded-md bg-primary/15 text-primary hover:bg-primary/25 hover:scale-105 transition-all duration-300 px-4 py-2" data-testid="button-login">
-              {t('navigation.login')}
-            </Button>
+            <Link href="/login">
+              <Button variant="ghost" size="default" className="font-semibold rounded-md bg-primary/15 text-primary hover:bg-primary/25 hover:scale-105 transition-all duration-300 px-4 py-2" data-testid="button-login">
+                {t('navigation.login')}
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -103,9 +105,11 @@ export default function Header() {
               </a>
               <div className="mt-6 space-y-3 pt-4 border-t">
                 <LanguageSwitcher />
-                <Button variant="ghost" size="default" className="w-full font-semibold rounded-md bg-primary/15 text-primary hover:bg-primary/25 hover:scale-105 transition-all duration-300 px-4 py-2" data-testid="button-login-mobile">
-                  {t('navigation.login')}
-                </Button>
+                <Link href="/login">
+                  <Button variant="ghost" size="default" className="w-full font-semibold rounded-md bg-primary/15 text-primary hover:bg-primary/25 hover:scale-105 transition-all duration-300 px-4 py-2" data-testid="button-login-mobile">
+                    {t('navigation.login')}
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
