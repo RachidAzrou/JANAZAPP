@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "node build.js",
-  "installCommand": "npm install",
+  "framework": null,
+  "buildCommand": "npm install && npm run build",
   "outputDirectory": "dist/public",
   "rewrites": [
     {
