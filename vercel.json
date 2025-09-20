@@ -7,7 +7,7 @@
   "framework": "vite",
   "functions": {
     "dist/index.js": {
-      "runtime": "@vercel/node",
+      "runtime": "nodejs22.x",
       "maxDuration": 30
     }
   },
