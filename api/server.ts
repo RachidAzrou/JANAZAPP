@@ -1,7 +1,7 @@
 // api/server.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { IncomingMessage, ServerResponse } from 'http';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: IncomingMessage, res: ServerResponse) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -12,20 +12,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   );
 
   if (req.method === 'OPTIONS') {
-    res.status(200).end();
+    res.statusCode = 200;
+    res.end();
     return;
   }
 
   // Basic health check endpoint
   if (req.method === 'GET' && req.url === '/api/health') {
-    res.status(200).json({ status: 'ok', message: 'JanazApp API is running' });
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ status: 'ok', message: 'JanazApp API is running' }));
     return;
   }
 
-  // Handle other API routes here as needed
-  res.status(200).json({
-    message: 'JanazApp API',
-    method: req.method,
-    url: req.url,
-  });
+  // Default response
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'application/json');
+  res.end(
+    JSON.stringify({
+      message: 'JanazApp API',
+      method: req.method,
+      url: req.url,
+    })
+  );
 }
