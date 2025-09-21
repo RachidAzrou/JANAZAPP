@@ -1,93 +1,71 @@
-import { 
-  type User, 
-  type InsertUser, 
-  type Citizen, 
+import {
+  type User,
+  type InsertUser,
+  type Citizen,
   type InsertCitizen,
   type Partner,
   type InsertPartner,
   users,
   citizens,
-  partners
-} from "@shared/schema";
-import { db } from "./db";
-import { eq } from "drizzle-orm";
+  partners,
+} from '../shared/schema.js'; // ⬅️ belangrijk: relatieve import + .js
+import { db } from './db.js';           // ⬅️ belangrijk: relatieve import + .js
+import { eq } from 'drizzle-orm';
 
-// Interface for all storage operations
+// Interface voor alle storage-operaties (handig voor testen/mocks)
 export interface IStorage {
-  // User operations
-  getUser(id: string): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
-  
-  // Citizen registration operations
-  createCitizen(citizen: InsertCitizen): Promise<Citizen>;
+  // Users (optioneel – als je ze niet gebruikt, kun je weglaten)
+  createUser(data: InsertUser): Promise<User>;
+  getUserByEmail(email: string): Promise<User | undefined>;
+
+  // Citizens
+  createCitizen(data: InsertCitizen): Promise<Citizen>;
   getCitizen(id: string): Promise<Citizen | undefined>;
-  getCitizenByEmail(email: string): Promise<Citizen | undefined>;
-  
-  // Partner registration operations
-  createPartner(partner: InsertPartner): Promise<Partner>;
+
+  // Partners
+  createPartner(data: InsertPartner): Promise<Partner>;
   getPartner(id: string): Promise<Partner | undefined>;
   getPartnerByEmail(email: string): Promise<Partner | undefined>;
 }
 
-// Database storage implementation
-export class DatabaseStorage implements IStorage {
-  // User operations
-  async getUser(id: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.id, id));
-    return user || undefined;
+class DatabaseStorage implements IStorage {
+  // ===== Users =====
+  async createUser(data: InsertUser): Promise<User> {
+    const [row] = await db.insert(users).values(data).returning();
+    return row;
   }
 
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.username, username));
-    return user || undefined;
+  async getUserByEmail(email: string): Promise<User | undefined> {
+    const [row] = await db.select().from(users).where(eq(users.email, email));
+    return row || undefined;
   }
 
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const [user] = await db
-      .insert(users)
-      .values(insertUser)
-      .returning();
-    return user;
-  }
-
-  // Citizen operations
-  async createCitizen(insertCitizen: InsertCitizen): Promise<Citizen> {
-    const [citizen] = await db
-      .insert(citizens)
-      .values(insertCitizen)
-      .returning();
-    return citizen;
+  // ===== Citizens =====
+  async createCitizen(data: InsertCitizen): Promise<Citizen> {
+    const [row] = await db.insert(citizens).values(data).returning();
+    return row;
   }
 
   async getCitizen(id: string): Promise<Citizen | undefined> {
-    const [citizen] = await db.select().from(citizens).where(eq(citizens.id, id));
-    return citizen || undefined;
+    const [row] = await db.select().from(citizens).where(eq(citizens.id, id));
+    return row || undefined;
   }
 
-  async getCitizenByEmail(email: string): Promise<Citizen | undefined> {
-    const [citizen] = await db.select().from(citizens).where(eq(citizens.email, email));
-    return citizen || undefined;
-  }
-
-  // Partner operations
-  async createPartner(insertPartner: InsertPartner): Promise<Partner> {
-    const [partner] = await db
-      .insert(partners)
-      .values(insertPartner)
-      .returning();
-    return partner;
+  // ===== Partners =====
+  async createPartner(data: InsertPartner): Promise<Partner> {
+    const [row] = await db.insert(partners).values(data).returning();
+    return row;
   }
 
   async getPartner(id: string): Promise<Partner | undefined> {
-    const [partner] = await db.select().from(partners).where(eq(partners.id, id));
-    return partner || undefined;
+    const [row] = await db.select().from(partners).where(eq(partners.id, id));
+    return row || undefined;
   }
 
   async getPartnerByEmail(email: string): Promise<Partner | undefined> {
-    const [partner] = await db.select().from(partners).where(eq(partners.email, email));
-    return partner || undefined;
+    const [row] = await db.select().from(partners).where(eq(partners.email, email));
+    return row || undefined;
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage: IStorage = new DatabaseStorage();
