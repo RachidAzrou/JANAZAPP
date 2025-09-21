@@ -1,12 +1,10 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "npm install && npm run build",
-  "outputDirectory": "dist/public",
+  "installCommand": "npm ci --include=dev",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/[...route]"
-    }
+    { "source": "/api/(.*)", "destination": "/api/[...route]" }
   ]
 }
